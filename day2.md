@@ -357,7 +357,8 @@ for href in response.css('ul.pager a::attr(href)'):
 for a in response.css('ul.pager a'):
     yield response.follow(a, callback=self.parse)
 ```
-+ 这是a标签特有的快捷方式
+这是a标签特有的快捷方式
+
 再次简写如下
 ```python 
 anchors = response.css('ul.pager a')
