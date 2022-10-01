@@ -74,14 +74,14 @@ class MyspiderPipeline:
 |Downloader Middlewares|下载中间件|***Scrapy的Request和Requesponse之间的处理模块***|
 |Scheduler|调度器|***接受引擎的请求，再次请求时将请求提供给引擎***|
 
-#### 1. spider的yeild将request发送给engine
-#### 2. engine对request不做任何处理发送给scheduler
-#### 3. scheduler，生成request交给engine
-#### 4. engine拿到request，通过middleware发送给downloader
-#### 5. downloader在获取到response之后，又经过middleware发送给engine
-#### 6. engine获取到response之后，返回给spider，spider的parse()方法对获取到的response进行处理，解析出items或者requests
-#### 7. 将解析出来的items或者requests发送给engine
-#### 8. engine获取到items或者requests，将items发送给ItemPipeline，将requests发送给scheduler（ps，只有调度器中不存在request时，程序才停止，及时请求失败scrapy也会重新进行请求）
+##### 1. spider的yeild将request发送给engine
+##### 2. engine对request不做任何处理发送给scheduler
+##### 3. scheduler，生成request交给engine
+##### 4. engine拿到request，通过middleware发送给downloader
+##### 5. downloader在获取到response之后，又经过middleware发送给engine
+##### 6. engine获取到response之后，返回给spider，spider的parse()方法对获取到的response进行处理，解析出items或者requests
+##### 7. 将解析出来的items或者requests发送给engine
+##### 8. engine获取到items或者requests，将items发送给ItemPipeline，将requests发送给scheduler（ps，只有调度器中不存在request时，程序才停止，及时请求失败scrapy也会重新进行请求）
 
 
 
