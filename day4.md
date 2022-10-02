@@ -223,6 +223,8 @@ if __name__ == "__main__":
 
 unittest.main()->setUp(self)->testDouyu(self)->tearDown(self)
 
+但是页面的css改了，直接用不了
+
 这里开始拆
 
 > 第一步：导库
