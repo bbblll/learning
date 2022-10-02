@@ -270,7 +270,7 @@ while True:
   print("---------------第一页--------------")
   count+=1
   soup = bs(driver.page_source,"lxml")
-  # 房间名,已经改名，需要修改，我这算是改好的
+  # 房间名,css类已经改名，需要修改，我这算是改好的
   names = soup.find_all("h3",{"class":"DyListCover-intro"})
   # 观众人数
   numbers = soup.find_all("span",{"class":"DyListCover-hot"})
